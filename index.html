@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador Logístico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Gerenciador Logístico</h1>
+
+    <nav>
+        <button id="btnInicio">Início</button>
+        <button id="btnProdutos">Produtos</button>
+        <button id="btnEnderecos">Enderecos</button>
+        <button id="btnTransportadoras">Transportadoras</button>
+        <button id="btnFretes">Fretes</button>
+    </nav>
+
+    <main>
+        <h2>Bem-vindo ao Gerenciador Logístico</h2>
+        <p>Sistema de gerenciamento e controle logístico.</p>
+        <section id="Inicio" class="tela">
+            <h2>Painel de Controle</h2>
+
+            <p>Bem-vindo ao Gerenciador Logistico!</p>
+
+            <h3>Resumo do Sistema</h3>
+
+<div class="painel">
+
+    <div class="cartao" data-tela="Produtos">
+        <h3>Produtos</h3>
+        <p>Gerenciamento de produtos cadastrados</p>
+    </div>
+
+    <div class="cartao" data-tela="Transportadoras">
+        <h3>Transportadoras</h3>
+        <p>Gerenciamento de transportadoras</p>
+    </div>
+
+    <div class="cartao" data-tela="Endereços">
+        <h3>Endereços</h3>
+        <p>Gerenciamento de endereços cadastrados</p>
+    </div>
+
+    <div class="cartao" data-tela="Fretes">
+        <h3>Fretes</h3>
+        <p>Controle de fretes</p>
+    </div>
+
+</div>
+
+        </section>
+    <section id="Produtos" class="tela">
+    <h2>Gerenciamento de Produtos</h2>
+    <label>Nome do produto:</label>
+    <input type="text" id="nomeProduto" placeholder="Digite o nome do produto">
+
+    <label>Código:</label>
+    <input type="text" id="codigoProduto" placeholder="Digite o código">
+
+    <label>Quantidade:</label>
+    <input type="number" id="quantidadeProduto" placeholder="Digite a quantidade">
+
+    <label>Preço:</label>
+    <input type="number" id="precoProduto" placeholder="Digite o preço">
+
+    <button id="btnAdicionarProduto">Adicionar Produto</button>
+
+    <h3>Lista de produtos Cadastrados</h3>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Código</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody id="listaProdutos">
+        </tbody>
+    </table>
+    </section>
+    <section id="Enderecos" class="tela">
+    <h2>Gerenciamento de Endereços</h2> 
+    <label>Código de endereço:</label>
+    <input type="text" id="codigoEndereco" placeholder="Digite o código">
+    
+    <label>Rua:</label>
+    <input type="text" id="ruaEndereco" placeholder="Digite a rua">
+
+    <label>Número:</label>
+    <input type="text" id="numeroEndereco" placeholder="Digite o numero">
+
+    <label>Cidade:</label>
+    <input type="text" id="cidadeEndereco" placeholder="Digite a cidade">
+
+    <button id="btnAdicionarEndereco">Adicionar Endereço</button>
+    <h3>Lista de Endereços Cadastrados</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Rua</th>
+                <th>Número</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
+        <tbody id="listaEnderecos">
+        </tbody>
+    </table>
+    </section>
+    <section id="Transportadoras" class="tela">
+    <h2>Gerenciamento de Transportes</h2>
+
+    <label>Nome da Transportadora:</label>
+    <input type="text" id="nomeTransportadora" placeboholder="Digite o nome">
+
+    <label>CNPJ:</label>
+    <input type="text" id="cnpjTransportadora" placebojolder="Digite o cnpj">
+
+    <label>Telefone:</label>
+    <input type="tel" id="telefoneTransportadora" placeboholder="Digite o telefonr">
+
+    <button id="btnAdicionarTransportadora">Adicionar Transportadora</button>
+    <h3>Lista de Transportadora</h3>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody id="listaTransportadoras"></tbody>
+    </table>
+    </section>
+    <section id="Fretes" class="tela">
+    <h2>Gerenciamento de Fretes</h2>  
+    <label>Origem:</label>
+    <input type="text" id="origemFrete" placeholder="Digite a origem">
+    
+    <label>Destino:</label>
+    <input type="text" id="destinoFrete" placeholder="Digite o destino">
+
+    <label>Transportadora:</label>
+    <input type="text" id="transportadoraFrete" placeholder="Digite a transportadora">
+
+    <label>Valor do frete:</label>
+    <input type="number" id="valorFrete" placeholder="Digite o valor">
+
+    <button id="btnAdicionarFrete">Adicionar Frete</button>
+    <h3>Lista de Fretes Cadastrados</h3>
+
+    <table bolder="1">
+        <thead>
+            <tr>
+                <th>Origem</th>
+                <th>Destino</th>
+                <th>Transportadora</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody id="listaFretes"></tbody>
+    </table>
+    </section>
+    </main>
+  <script src="script.js"></script>
+</body>
+</html>
